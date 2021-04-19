@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>내장객체 선언</title>
+<script type="text/javascript">
+	var tv = new Object();
+	tv.color = "white";
+	tv.price = 300000;
+	tv.info = function(){
+		document.write("tv 색상 " + this.color + "<br>");
+		document.write("tv 가격 " + this.price + "<br>");	
+	}
+	
+	var car = {
+		color:"red",
+		price:5000000,
+		info:function(){
+			document.write("car 색상 " + this.color + "<br>");
+			document.write("car 가격 " + this.price + "<br>");	
+		}
+	}
+	
+	tv.info();
+	car.info(); 
+</script>
+</head>
+<body>
+
+</body>
+</html>
