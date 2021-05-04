@@ -10,7 +10,7 @@ p {
 }
 
 .txt1 {
-	background-color: hotpink;
+	background-color: aqua;
 }
 
 .txt2 {
@@ -18,11 +18,11 @@ p {
 }
 
 .txt3 {
-	background-color: red;
+	background-color: orange;
 }
 
 .txt4 {
-	background-color: silver;
+	background-color: green;
 }
 
 .txt5 {
@@ -34,9 +34,9 @@ p {
 function moveElement( ) {
     $(".txt3").animate({marginLeft:"+=50px"}, 800);
     $(".txt4").animate({marginLeft:"+=50px"}, 800);
-    $(".txt4").stop()
+    $(".txt4").stop();
     $(".txt5").animate({marginLeft:"+=50px"}, 800);
-    $(".txt5").stop(true, true)
+    $(".txt5").stop(true, true);//애니메이션 종료
 }
 
 $(function() {

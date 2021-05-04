@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script>
+$(function() {
+   obj = {
+	   "id":1, 
+	   "name":"김상권" , 
+	   "gender":false, 
+	   "age":28, 
+	   "test":{"국어":80, "수학":80, "영어":80}
+   };
+   
+   console.log(obj.id);
+   console.log(obj.name);
+   console.log(obj.gender);
+   console.log(obj.age);
+   console.log(obj.test.국어);
+   console.log(obj.test.영어);
+   console.log(obj.test.수학);
+   
+   
+   objArr = [
+       {"id":1, "name":"김상권" , "gender":false, "age":28},
+       {"id":2, "name":"나상권" , "gender":true, "age":30}
+   ]
+   
+   $.each(objArr, function(i, elt) {
+   		console.log(elt.id);
+   		console.log(elt.name);
+		console.log(elt.gender);
+		console.log(elt.age);
+   });
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>

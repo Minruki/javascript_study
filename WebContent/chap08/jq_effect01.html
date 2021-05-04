@@ -36,16 +36,21 @@ function btn3Click() {
 function btn4Click() {
     $(".box").fadeTo("fast", 0.3);
 }
-
-function btn5Click() {
-    $(".box").fadeTo("slow", 1);
+ 
+function btn5Click(value) {
+    var v = value;
+    $(".box").fadeTo("slow", v);
 }
 
 $(function() {	
-
 	$(".btn2").hide();
 	
-	$(".btn1").on("click", btn1Click);
+	$(".btn1").on("click", function(){
+	    $(".box").slideUp(1000, "linear", function(){
+			$(".btn1").hide();
+		    $(".btn2").show();
+	    } );
+	});
 	
 	$(".btn2").on("click", btn2Click);
 	
@@ -53,7 +58,7 @@ $(function() {
 
 	$(".btn4").on("click", btn4Click);
 	
-    $(".btn5").on("click", btn5Click);
+    $(".btn5").on("click", btn5Click(1));
 
 });
 </script>

@@ -79,7 +79,6 @@
 	</record>
 	<record>
 		<id>12</id>
-
 		<first_name>Stanislaus</first_name>
 		<last_name>Yaknov</last_name>
 		<email>syaknovb@trellian.com</email>
@@ -95,18 +94,14 @@
 	<record>
 		<id>14</id>
 		<first_name>Johna</first_name>
-		<last_name>
-			Jessett
-		</last_name>
+		<last_name>Jessett</last_name>
 		<email>jjessettd@bandcamp.com</email>
 		<gender>Female</gender>
 	</record>
 	<record>
 		<id>15</id>
 		<first_name>Hermia</first_name>
-		<last_name>
-			Maidstone
-		</last_name>
+		<last_name>Maidstone</last_name>
 		<email>hmaidstonee@dedecms.com</email>
 		<gender>Female</gender>
 	</record>
@@ -704,6 +699,5 @@
 		<last_name>Kirrage</last_name>
 		<email>jkirrage2r@house.gov</email>
 		<gender>Female</gender>
-
 	</record>
 </dataset>
