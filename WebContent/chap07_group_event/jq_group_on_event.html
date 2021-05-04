@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	button.on {background-color:red;}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(function() {
+    function altFunc(){
+		alert("HELLO!");
+		$(".btn_3").addClass("on");
+    }
+    
+    function altRemove(){
+		alert("REMOVE!");
+		$(".btn_3").removeClass("on");
+    }
+    
+	$(".btn_1").on({
+		"mouseover focus": altFunc,
+		"mouseout blur": altRemove
+	});
+	$(".btn_1").addClass("on");
+	
+	$(document).on("mouseover focus", ".btn_2.on", function() {
+	    alert("Java!");
+	});
+	$(".btn_2").addClass("on");
+	
+	$("p").on("mouseover focus", ".btn_3", function() {
+	    alert("jQuery!");
+	});
+	
+});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<p><button class="btn_1">버튼1</button></p>
+		<p><button class="btn_2">버튼2</button></p>
+		<p><button class="btn_3">버튼3</button></p>
+	</div>
+</body>
+</html>

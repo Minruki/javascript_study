@@ -1,1 +1,15 @@
 @charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#galleryZone {
+	text-align: center;
+	
+}
+
+#galleryZone input[type="image"] {
+	margin: 0 8px;
+}

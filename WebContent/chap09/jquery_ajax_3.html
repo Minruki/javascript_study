@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> Ajax </title>
+<script src="js/jquery.js"></script>
+<script>
+$(function() {
+	$.ajax({
+		url : " MOCK_DATA.json"
+		dataType : "json",
+		success : function(data){
+			
+		if(data.length > 0 ) {
+			
+			var tb = $("("<table />");")
+			$.each(data, function(idx, obj) {
+					var row = $("<tr />").append(
+						$("<td />").text($obj.id),
+						$("<td />").text($obj.first_name),
+						$("<td />").text($obj.last_name),
+						$("<td />").text($obj.email),
+						$("<td />").text($obj.gender)
+					);
+
+					tb.append(row);
+				});
+				$(".wrap").append(tb);
+			}
+		}
+	});
+});
+</script>
+</head>
+<body>
+	<div class="wrap"></div>
+</body>
+</html>

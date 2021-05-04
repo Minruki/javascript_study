@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang = "ko">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script>
-	var color = ["hotpink", "pink", "rose", "lightpurple"];
-	
-	var i=0;
-	function changeColor(){
-		i++;
-		if(i >= color.length) {
-			i=0;
-			
-		}
-		var bodyTag = document.getElemenById("theBody");
-		bodyTag.style.backgroundColor = color[i];
-		
-	}
+   <meta charset="UTF-8">
+   <title>Factorial 활용한 DecToBin</title>
+   <script type="text/javascript">
+   
+      var num = Number(prompt("10진수 정수를 입력하세요.", ""));
+      document.write("num >> " + num + "<br>");
+      
+      var str = "";
+      DecToBin(num, str);
+      
+      function DecToBin(num, str) {
+         if(num <= 1){
+            str += num % 2;
+            return document.write(str.split("").reverse().join(""));
+         }
+         
+         if (num % 2 == 0){
+            str += "0";
+         } else if(num % 2 == 1){
+            str += "1";
+         }
+            
+         DecToBin(parseInt(num / 2), str);
+      }
 
-</script>
-
+   </script>
 </head>
-<body id = "theBody">
-<button onclick ="changeColor();">배경색 바꾸기</button>
-
+<body>
 </body>
 </html>

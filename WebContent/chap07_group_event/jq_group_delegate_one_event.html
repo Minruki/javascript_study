@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+button.on {
+	background-color: red;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function() {
+		$(".btn_wrap").delegate(".btn_1", "mouseover focus", function() {
+			alert("HELLO!");
+		});
+		
+		$(document).one("mouseover focus", ".btn_2", function() {
+			alert("WELCOME!");
+		});
+		/* $("p").one("mouseover focus", ".btn_2", function() {
+		alert("jQuery!");
+		}); */
+
+    });
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<p class="btn_wrap">
+			<button class="btn_1">버튼1</button>
+		</p>
+		<p>
+			<button class="btn_2">버튼2</button>
+		</p>
+	</div>
+</body>
+</html>

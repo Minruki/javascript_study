@@ -1,0 +1,33 @@
+<!DOCTYPE html>"C:/Users/이민정/Desktop/Doit_자바스크립트_제이쿼리_전면개정판_소스_210407/Doit_자바스크립트_제이쿼리_전면개정판_소스_210407/02_둘째마당 소스/7장/jq_event2_1.html"
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script>
+	$(window).on("scroll", function()){
+		var sc_top = $(this).scollTop();
+		var sc_left= $(this).scollLeft();
+		
+		$(".top").text(sc_top);
+		$(".left").text(sc_left);
+		
+	});
+</script>
+<style>
+	body{
+		height:10000px;
+		width:5000px;
+	}
+	#wrap{
+		position: fixed;
+		left: 10px; top: 10px;
+	}
+	</style>
+</head>
+<body>
+<div id = "wrap">
+	<p>scrollTop: <span class="top">0</span>px</p> 
+	<p>scrollLeft: <span class="left">0</span>px</p>
+</body>
+</html>

@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset = "UTF-8">
-	<title> 날짜 정보 객체 </title>
-	<script>
-	var today = new Date( );
-	var nowMonth = today.getMonth( ),
-					nowDate = today.getDate( ),
-					nowDay = today.getDay( );
-	
+<meta charset="UTF-8">
+<title>날짜 정보 객체</title>
+<script>
+	var today = new Date();
+	var nowMonth = today.getMonth(); 
+	var nowDate = today.getDate();
+	var nowDay = today.getDay();
+
 	document.write("<h1>오늘 날짜 정보</h1>");
 	document.write("현재 월: " + nowMonth, "<br>");
 	document.write("현재 일: " + nowDate, "<br>");
 	document.write("현재 요일:" + nowDay, "<br>");
-	
+
 	var worldcup = new Date(2002, 4, 31);
-	var theMonth = worldcup.getMonth( ),
-					theDate = worldcup.getDate( ),
-					theDay = worldcup.getDay( );
-	
+	var theMonth = worldcup.getMonth();
+	theDate = worldcup.getDate();
+	theDay = worldcup.getDay();
+
 	document.write("<h1>월드컵 날짜 정보</h1>");
 	document.write("2002월드컵 몇 월: " + theMonth, "<br>");
 	document.write("2002월드컵 몇 일: " + theDate, "<br>");
-	document.write("2002월드컵 무슨 요일: " + theDay, "<br>");
-	</script>
+	document.write("2002월드컵 무슨 요일: " + yoil(theDay), "<br>");
+	
+	function yoil(theDay){
+		var y;
+		switch(theDay){
+			case 0: y = "일요일"; break;
+			case 1: y = "월요일"; break;
+			case 2: y = "화요일"; break;
+			case 3: y = "수요일"; break;
+			case 4: y = "목요일"; break;
+			case 5: y = "금요일"; break;
+			case 6: y = "토요일"; break;
+		}
+		return y;
+	}
+</script>
 </head>
 <body>
 </body>
